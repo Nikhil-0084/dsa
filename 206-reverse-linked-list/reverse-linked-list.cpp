@@ -11,23 +11,19 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-         if (head == NULL || head->next == NULL)
-            return head;
-        stack<ListNode*>st;
+        stack<int>st;
         ListNode*temp=head;
-        while(temp!=NULL){
-            st.push(temp);
+        while(temp){
+            st.push(temp->val);
             temp=temp->next;
+
         }
-        head=st.top();
-        st.pop();
         temp=head;
-        while(!st.empty()){
-            temp->next=st.top();
+        while(temp){
+            temp->val=st.top();
             st.pop();
             temp=temp->next;
         }
-        temp->next=NULL;
         return head;
     }
 };
