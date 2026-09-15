@@ -25,12 +25,12 @@ public:
         }
 
         // Swap nodes in pairs
-        for (int i = 0; i + 1 < v.size(); i += 2) {
+        for (int i = 0; i  < v.size()-1; i += 2) {
             swap(v[i], v[i + 1]);
         }
 
         // Reconnect nodes
-        for (int i = 0; i + 1 < v.size(); i++) {
+        for (int i = 0; i  < v.size()-1; i++) {
             v[i]->next = v[i + 1];
         }
 
