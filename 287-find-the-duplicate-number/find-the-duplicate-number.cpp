@@ -8,7 +8,7 @@ public:
         }
         int repeating=-1;
         for(int i=1;i<=n;i++){
-            if(ans[i]>=2) repeating=i;
+            if(ans[i]>1) repeating=i;
         }
         return repeating;
     }
